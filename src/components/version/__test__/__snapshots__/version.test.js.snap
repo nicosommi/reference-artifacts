@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Version component  onTouch should refresh clicks after a touch 1`] = `
+<Fragment>
+  <Button
+    onPress={[Function]}
+    title="Press me"
+  />
+  <Text>
+    Version 
+    2.354.3347-alpha4
+  </Text>
+  <Text>
+    Clicks 
+    1
+  </Text>
+</Fragment>
+`;

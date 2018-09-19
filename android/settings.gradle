@@ -1,0 +1,3 @@
+rootProject.name = 'starterkit_mobile'
+
+include ':app'
