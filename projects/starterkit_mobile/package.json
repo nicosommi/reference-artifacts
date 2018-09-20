@@ -1,0 +1,67 @@
+{
+  "name": "starterkit_mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "flow": "flow",
+    "show-docs": "npm-run-all build-docs serve-docs",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "clean": "shx rm -fr rawjs",
+    "lint": "eslint .",
+    "prepare-docs": "flow-remove-types src -d rawjs",
+    "jsdoc": "jsdoc -c jsdoc.config.js",
+    "generate-docs": "npm-run-all clean prepare-docs jsdoc"
+  },
+  "prettier": {
+    "semi": false
+  },
+  "dependencies": {
+    "react": "16.5.1",
+    "react-native": "0.57.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.6.0",
+    "eslint-plugin-flowtype": "^2.50.1",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.78.0",
+    "flow-remove-types": "^1.2.3",
+    "jest": "23.6.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-template": "https://github.com/braintree/jsdoc-template.git",
+    "metro-react-native-babel-preset": "^0.45.3",
+    "minami": "^1.2.3",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.2",
+    "react-native-mock-render": "^0.1.2",
+    "react-test-renderer": "16.5.0",
+    "shx": "^0.3.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/util/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/rawjs/*",
+      "<rootDir>/node_modules/*"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
+  }
+}

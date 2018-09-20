@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Version component  (happy path) should render properly 1`] = `
+<Fragment>
+  <Button
+    onPress={[Function]}
+    title="Press me"
+  />
+  <Text>
+    Version 
+    2.354.3347-alpha4
+  </Text>
+  <Text>
+    Clicks 
+    0
+  </Text>
+</Fragment>
+`;
+
+exports[`Version component  (happy path) should render properly 2`] = `
+<Fragment>
+  <Button
+    onPress={[Function]}
+    title="Press me"
+  />
+  <Text>
+    Version 
+    2.354.3347-alpha4
+  </Text>
+  <Text>
+    Clicks 
+    1
+  </Text>
+</Fragment>
+`;
