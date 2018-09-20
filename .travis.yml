@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "10"
+
+env:
+  - APP=starterkit_mobile
+
+cache:
+  directories:
+    - "starterkit_mobile/node_modules"
+
+script:
+  - cd $APP
+  - yarn
+  - yarn test
+  - yarn generate-docs
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: docs
+  on:
+    branch: dev
